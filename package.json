@@ -11,24 +11,23 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "typecheck": "tsc --noEmit"
+    "build": "bun build src/cli/speq.ts --target node --outfile dist/speq.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "bun run build && mkdir -p bin && printf '#!/usr/bin/env node\\nrequire(\"../dist/speq\");\\n' > bin/speq.js && chmod +x bin/speq.js"
   },
   "peerDependencies": {
     "@badeball/cypress-cucumber-preprocessor": ">=20.0.0",
     "@testing-library/cypress": ">=10.0.0",
     "cypress": ">=13.0.0"
   },
-  "dependencies": {
-    "commander": "^14.0.0",
-    "prompts": "^2.4.2"
-  },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
     "@testing-library/cypress": "^10.0.0",
     "@types/node": "^25.6.0",
     "@types/prompts": "^2.4.9",
+    "commander": "^14.0.0",
     "cypress": "^13.0.0",
+    "prompts": "^2.4.2",
     "typescript": "^5.0.0"
   }
 }

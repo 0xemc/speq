@@ -5,7 +5,7 @@ import { init } from "./commands/init";
 import { add } from "./commands/add";
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const pkg = require("../package.json") as { version: string };
+const pkg = require("../../package.json") as { version: string };
 
 const program = new Command();
 

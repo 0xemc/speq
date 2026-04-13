@@ -103,7 +103,7 @@ export async function init(opts: { yes?: boolean; dir?: string }): Promise<void>
   // ── Write speq.json ────────────────────────────────────────────────────────
 
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const pkg = require("../../package.json") as { version: string };
+  const pkg = require("../../../package.json") as { version: string };
   const config = {
     version: pkg.version,
     supportDir,
