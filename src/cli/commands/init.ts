@@ -78,7 +78,7 @@ export async function init(opts: { yes?: boolean; dir?: string }): Promise<void>
 
     const rel = path.relative(
       path.dirname(supportPath),
-      path.join(targetDir, "index")
+      path.join(targetDir, "adapters/browser/index")
     );
     const importPath = rel.startsWith(".") ? rel : `./${rel}`;
     const importLine = `import '${importPath}';`;
@@ -92,7 +92,7 @@ export async function init(opts: { yes?: boolean; dir?: string }): Promise<void>
   } else {
     const rel = path.relative(
       path.join(cwd, "cypress/support"),
-      path.join(targetDir, "index")
+      path.join(targetDir, "adapters/browser/index")
     );
     console.log(
       `\n⚠  Could not detect support file — add this manually:\n` +

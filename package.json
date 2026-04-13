@@ -17,8 +17,23 @@
   },
   "peerDependencies": {
     "@badeball/cypress-cucumber-preprocessor": ">=20.0.0",
+    "@cucumber/cucumber": ">=10.0.0",
     "@testing-library/cypress": ">=10.0.0",
     "cypress": ">=13.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@badeball/cypress-cucumber-preprocessor": {
+      "optional": true
+    },
+    "@cucumber/cucumber": {
+      "optional": true
+    },
+    "@testing-library/cypress": {
+      "optional": true
+    },
+    "cypress": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
